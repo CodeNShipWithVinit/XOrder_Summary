@@ -239,7 +239,7 @@ body {
 .proceed-btn {
     width: 100%;
     padding: 1rem;
-    background-color: var(--color-primary-blue);
+    background-color:  hsl(245, 75%, 52%);
     color: var(--color-white);
     font-family: var(--font-primary);
     font-size: 0.9375rem;
@@ -256,18 +256,7 @@ body {
 }
 
 .proceed-btn:hover {
-    /* background-color: var(--color-primary-hover);
-    background-color: rgb(141, 131, 248);
-    box-shadow: var(--shadow-button-hover);
-    transform: translateY(-2px); */
-    /* background-color: rgb(118, 108, 241); */
-    background-color: rgb(118, 108, 241) !important; /* Lighter than rgb(56, 41, 224) */
-    box-shadow: var(--shadow-button-hover);
-    transform: translateY(-2px);
-
-}
-.cancel-order:hover {
-    color: rgb(30, 40, 80) !important; /* Darker than rgb(114, 128, 167) */
+    background-color: hsl(245, 83%, 68%); /* clearly different */
 }
 
 .proceed-btn:active {
@@ -284,17 +273,14 @@ body {
     font-family: var(--font-primary);
     font-size: 0.9375rem;
     font-weight: var(--font-weight-black);
-    color: var(--color-desaturated-blue);
+    color: hsl(224, 23%, 55%);
     cursor: pointer;
     transition: color var(--transition-fast);
 }
+.cancel-order:hover {
+    color: hsl(223, 47%, 23%); /* clearly different */
+}
 
-/* .cancel-order:hover {
-    color: var(--color-dark-blue);
-} */
-/* .cancel-order:hover {
-    color: rgb(0, 0, 0) !important;
-} */
 
 /* ===================================
    RESPONSIVE DESIGN
@@ -401,18 +387,3 @@ body {
         display: none;
     }
 }
-/* .proceed-btn,
-.cancel-order {
-    pointer-events: auto;
-    position: relative;
-    z-index: 10;
-} */
-
-
-/* .proceed-btn:hover {
-    background-color: rgb(0, 200, 255) !important;
-}
-
-.cancel-order:hover {
-    color: rgb(0, 0, 0) !important;
-} */
