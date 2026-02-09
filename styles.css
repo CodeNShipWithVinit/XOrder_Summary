@@ -401,12 +401,12 @@ body {
         display: none;
     }
 }
-.proceed-btn,
+/* .proceed-btn,
 .cancel-order {
     pointer-events: auto;
     position: relative;
     z-index: 10;
-}
+} */
 
 
 /* .proceed-btn:hover {
