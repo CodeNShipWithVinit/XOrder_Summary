@@ -395,7 +395,6 @@ body {
     }
 }
 
-.proceed-btn,
 .cancel-order {
     pointer-events: auto;
     position: relative;
