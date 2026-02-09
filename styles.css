@@ -1,0 +1,391 @@
+/* ===================================
+   CSS CUSTOM PROPERTIES
+   =================================== */
+:root {
+    /* Colors - Premium Payment Flow Palette */
+    --color-primary-blue: hsl(245, 75%, 52%);
+    --color-pale-blue: hsl(225, 100%, 94%);
+    --color-very-pale-blue: hsl(225, 100%, 98%);
+    --color-desaturated-blue: hsl(224, 23%, 55%);
+    --color-dark-blue: hsl(223, 47%, 23%);
+    --color-white: hsl(0, 0%, 100%);
+    
+    /* Hover states */
+    --color-primary-hover: hsl(245, 83%, 68%);
+    --color-change-hover: hsl(245, 83%, 68%);
+    
+    /* Typography */
+    --font-primary: 'Red Hat Display', sans-serif;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* Border radius */
+    --radius-sm: 0.625rem;
+    --radius-md: 1.25rem;
+    
+    /* Shadows */
+    --shadow-card: 0 40px 40px -20px hsla(245, 75%, 52%, 0.15);
+    --shadow-button: 0 20px 20px hsla(245, 75%, 52%, 0.19);
+    --shadow-button-hover: 0 20px 40px hsla(245, 75%, 52%, 0.4);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* ===================================
+   RESET & BASE STYLES
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.6;
+    color: var(--color-desaturated-blue);
+    background-color: var(--color-pale-blue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-md);
+    
+    /* Desktop background pattern */
+    background-image: url('pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+}
+.attribution{
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Mobile background pattern */
+@media (max-width: 450px) {
+    body {
+        background-image: url('pattern-background-mobile.svg');
+    }
+}
+
+/* ===================================
+   MAIN CONTAINER
+   =================================== */
+.main {
+    width: 100%;
+    max-width: 450px;
+    animation: slideUp 0.6s ease backwards;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===================================
+   CARD CONTAINER
+   =================================== */
+.container {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 50px 50px -20px hsla(245, 75%, 52%, 0.2);
+}
+
+/* ===================================
+   HERO IMAGE
+   =================================== */
+.image-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===================================
+   CONTENT SECTION
+   =================================== */
+.content {
+    padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-lg);
+    text-align: center;
+    animation: fadeIn 0.8s ease 0.2s backwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.heading {
+    font-size: 1.75rem;
+    font-weight: var(--font-weight-black);
+    color: var(--color-dark-blue);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.2;
+}
+
+.summary-para {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--color-desaturated-blue);
+    margin-bottom: var(--spacing-md);
+    padding: 0 var(--spacing-xs);
+}
+
+/* ===================================
+   PLAN DETAILS
+   =================================== */
+.plan-details {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    background-color: var(--color-very-pale-blue);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-md);
+    transition: background-color var(--transition-fast);
+}
+
+.plan-details:hover {
+    background-color: hsl(225, 100%, 96%);
+}
+
+.plan-icon {
+    flex-shrink: 0;
+}
+
+.plan-icon svg {
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+
+.plan-text {
+    flex: 1;
+    text-align: left;
+}
+
+.plan-text h2 {
+    font-size: 1rem;
+    font-weight: var(--font-weight-black);
+    color: var(--color-dark-blue);
+    margin-bottom: 0.125rem;
+}
+
+.plan-text p {
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-desaturated-blue);
+}
+
+.change-link {
+    flex-shrink: 0;
+}
+
+.change-link a {
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary-blue);
+    text-decoration: underline;
+    transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+}
+
+.change-link a:hover {
+    color: var(--color-change-hover);
+    text-decoration: none;
+}
+
+/* ===================================
+   BUTTONS
+   =================================== */
+
+/* Proceed Button */
+.proceed-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-primary-blue);
+    color: var(--color-white);
+    font-family: var(--font-primary);
+    font-size: 0.9375rem;
+    font-weight: var(--font-weight-black);
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow-button);
+    transition: 
+        background-color var(--transition-medium),
+        box-shadow var(--transition-medium),
+        transform var(--transition-fast);
+}
+
+.proceed-btn:hover {
+    background-color: var(--color-primary-hover);
+    box-shadow: var(--shadow-button-hover);
+    transform: translateY(-2px);
+}
+
+.proceed-btn:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-button);
+}
+
+/* Cancel Button */
+.cancel-order {
+    width: 100%;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    font-family: var(--font-primary);
+    font-size: 0.9375rem;
+    font-weight: var(--font-weight-black);
+    color: var(--color-desaturated-blue);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.cancel-order:hover {
+    color: var(--color-dark-blue);
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+/* Tablet and smaller */
+@media (max-width: 768px) {
+    .content {
+        padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md);
+    }
+    
+    .heading {
+        font-size: 1.5rem;
+    }
+    
+    .summary-para {
+        font-size: 0.9375rem;
+        padding: 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+    body {
+        padding: var(--spacing-sm);
+    }
+    
+    .main {
+        max-width: 100%;
+    }
+    
+    .content {
+        padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-sm);
+    }
+    
+    .heading {
+        font-size: 1.375rem;
+    }
+    
+    .summary-para {
+        font-size: 0.9375rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .plan-details {
+        padding: var(--spacing-sm);
+        gap: 0.75rem;
+    }
+    
+    .plan-text h2 {
+        font-size: 0.875rem;
+    }
+    
+    .plan-text p {
+        font-size: 0.875rem;
+    }
+    
+    .change-link a {
+        font-size: 0.8125rem;
+    }
+    
+    .proceed-btn,
+    .cancel-order {
+        font-size: 0.875rem;
+    }
+}
+
+/* ===================================
+   ACCESSIBILITY
+   =================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus styles for keyboard navigation */
+.proceed-btn:focus,
+.cancel-order:focus,
+.change-link a:focus {
+    outline: 3px solid var(--color-primary-blue);
+    outline-offset: 4px;
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    
+    .container {
+        box-shadow: none;
+    }
+    
+    .proceed-btn,
+    .cancel-order {
+        display: none;
+    }
+}
