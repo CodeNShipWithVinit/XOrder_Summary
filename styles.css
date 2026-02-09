@@ -274,12 +274,12 @@ body {
     font-family: var(--font-primary);
     font-size: 0.9375rem;
     font-weight: var(--font-weight-black);
-    color: hsl(224, 23%, 55%);
+    color: hsl(224, 23%, 55%) !important;
     cursor: pointer;
     transition: color var(--transition-fast);
 }
 .cancel-order:hover {
-    color: hsl(223, 47%, 23%); /* clearly different */
+    color: hsl(223, 47%, 23%) !important; /* clearly different */
 }
 
 
