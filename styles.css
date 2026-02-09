@@ -256,7 +256,8 @@ body {
 }
 
 .proceed-btn:hover {
-    background-color: hsl(245, 83%, 68%) !important; /* clearly different */
+    background-color: hsl(245, 83%, 68%) ; /* clearly different */
+    transform: none;
 }
 
 .proceed-btn:active {
@@ -278,7 +279,7 @@ body {
     transition: color var(--transition-fast);
 }
 .cancel-order:hover {
-    color: hsl(223, 47%, 23%) !important; /* clearly different */
+    color: hsl(223, 47%, 23%); /* clearly different */
 }
 
 
@@ -386,4 +387,12 @@ body {
     .cancel-order {
         display: none;
     }
+}
+
+
+.proceed-btn,
+.cancel-order {
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
 }
