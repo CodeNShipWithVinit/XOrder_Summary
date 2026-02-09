@@ -256,8 +256,8 @@ body {
 }
 
 .proceed-btn:hover {
-    background-color: var(--color-primary-hover);
-    /* background-color: rgb(56,41,224); */
+    /* background-color: var(--color-primary-hover); */
+    background-color: rgb(141, 131, 248);
     box-shadow: var(--shadow-button-hover);
     transform: translateY(-2px);
 }
