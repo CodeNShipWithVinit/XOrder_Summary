@@ -256,7 +256,7 @@ body {
 }
 
 .proceed-btn:hover {
-    background-color: hsl(245, 83%, 68%); /* clearly different */
+    background-color: hsl(245, 83%, 68%) !important; /* clearly different */
 }
 
 .proceed-btn:active {
@@ -278,7 +278,7 @@ body {
     transition: color var(--transition-fast);
 }
 .cancel-order:hover {
-    color: hsl(223, 47%, 23%); /* clearly different */
+    color: hsl(223, 47%, 23%) !important; /* clearly different */
 }
 
 
