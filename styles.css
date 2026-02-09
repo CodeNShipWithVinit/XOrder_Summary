@@ -286,7 +286,7 @@ body {
     color: var(--color-dark-blue);
 } */
 .cancel-order:hover {
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0) !important;
 }
 
 /* ===================================
@@ -393,4 +393,12 @@ body {
     .cancel-order {
         display: none;
     }
+}
+
+.proceed-btn:hover {
+    background-color: rgb(0, 200, 255) !important;
+}
+
+.cancel-order:hover {
+    color: rgb(0, 0, 0) !important;
 }
