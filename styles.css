@@ -260,7 +260,14 @@ body {
     background-color: rgb(141, 131, 248);
     box-shadow: var(--shadow-button-hover);
     transform: translateY(-2px); */
-    background-color: rgb(118, 108, 241);
+    /* background-color: rgb(118, 108, 241); */
+    background-color: rgb(118, 108, 241) !important; /* Lighter than rgb(56, 41, 224) */
+    box-shadow: var(--shadow-button-hover);
+    transform: translateY(-2px);
+
+}
+.cancel-order:hover {
+    color: rgb(30, 40, 80) !important; /* Darker than rgb(114, 128, 167) */
 }
 
 .proceed-btn:active {
@@ -394,7 +401,7 @@ body {
         display: none;
     }
 }
-
+.proceed-btn,
 .cancel-order {
     pointer-events: auto;
     position: relative;
@@ -402,10 +409,10 @@ body {
 }
 
 
-.proceed-btn:hover {
+/* .proceed-btn:hover {
     background-color: rgb(0, 200, 255) !important;
 }
 
 .cancel-order:hover {
     color: rgb(0, 0, 0) !important;
-}
+} */
