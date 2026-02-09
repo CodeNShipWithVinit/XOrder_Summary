@@ -395,6 +395,14 @@ body {
     }
 }
 
+.proceed-btn,
+.cancel-order {
+    pointer-events: auto;
+    position: relative;
+    z-index: 10;
+}
+
+
 .proceed-btn:hover {
     background-color: rgb(0, 200, 255) !important;
 }
