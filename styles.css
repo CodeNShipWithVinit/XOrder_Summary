@@ -256,10 +256,11 @@ body {
 }
 
 .proceed-btn:hover {
-    background-color: var(--color-primary-hover);
-    /* background-color: rgb(141, 131, 248); */
+    /* background-color: var(--color-primary-hover);
+    background-color: rgb(141, 131, 248);
     box-shadow: var(--shadow-button-hover);
-    transform: translateY(-2px);
+    transform: translateY(-2px); */
+    background-color: rgb(118, 108, 241);
 }
 
 .proceed-btn:active {
@@ -281,8 +282,11 @@ body {
     transition: color var(--transition-fast);
 }
 
-.cancel-order:hover {
+/* .cancel-order:hover {
     color: var(--color-dark-blue);
+} */
+.cancel-order:hover {
+    color: rgb(0, 0, 0);
 }
 
 /* ===================================
