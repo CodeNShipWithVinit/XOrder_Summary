@@ -63,5 +63,28 @@
       >.
     </footer>
     </main>
+    <script>
+  const proceedBtn = document.querySelector('.proceed-btn');
+  const cancelBtn = document.querySelector('.cancel-order');
+
+  if (proceedBtn) {
+    proceedBtn.addEventListener('mouseenter', () => {
+      proceedBtn.style.backgroundColor = 'hsl(245, 83%, 68%)';
+    });
+    proceedBtn.addEventListener('mouseleave', () => {
+      proceedBtn.style.backgroundColor = 'hsl(245, 75%, 52%)';
+    });
+  }
+
+  if (cancelBtn) {
+    cancelBtn.addEventListener('mouseenter', () => {
+      cancelBtn.style.color = 'hsl(223, 47%, 23%)';
+    });
+    cancelBtn.addEventListener('mouseleave', () => {
+      cancelBtn.style.color = 'hsl(224, 23%, 55%)';
+    });
+  }
+</script>
+
 </body>
 </html>
