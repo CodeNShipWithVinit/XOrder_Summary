@@ -256,7 +256,7 @@ body {
 }
 
 .proceed-btn:hover {
-    background-color: hsl(245, 83%, 68%) ; /* clearly different */
+    background-color: hsl(258, 83%, 68%) ; /* clearly different */
     transform: none;
 }
 
